@@ -26,6 +26,33 @@
 
 body {
   font-family: 'Proxima Nova Light', sans-serif;
+  color: #262626;
+}
+
+.button-o {
+  border: 2px solid #507fe1;
+  padding: 17px 22px;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #507fe1;
+  font-family: 'Proxima Nova Semibold', sans-serif;
+}
+
+.button {
+  border: none;
+  text-transform: uppercase;
+  padding: 25px 45px;
+  background-color: #507fe1;
+  color: #fff;
+  font-family: 'Proxima Nova Semibold', sans-serif;
+}
+
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
 }
 
 .navbar-wrap {
@@ -41,20 +68,24 @@ body {
   min-height: 80px;
 }
 
-.navbar__menu-button {
-  margin-right: 30px;
-}
-
 .navbar__phone {
   display: block;
+  margin-bottom: 5px;
   font-size: 19px;
   font-family: 'Proxima Nova Semibold', sans-serif;
   text-decoration: none;
-  color: #1C1C1C;
+  color: #262626;
 }
 
 .navbar__mobile, .navbar__landline {
   text-align: right;
+}
+
+.navbar__small-text {
+  display: block;
+  color: #7b7b79;
+  font-size: 14px;
+  text-decoration: none;
 }
 
 .menu-button {
@@ -98,6 +129,26 @@ body {
 .logo__description {
   display: block;
   font-size: 14px;
-  color: #6b6b6b;
+  color: #7b7b79;
+  font-size: 14px;
+}
+
+.hero {
+  background: #F1F1F1 url("../img/hero/hero-bg.jpeg") no-repeat center top 80px;
+  background-size: contain;
+  padding-top: 180px;
+  padding-bottom: 270px;
+}
+
+.hero__title {
+  margin-bottom: 40px;
+  font-size: 30px;
+}
+
+.hero__subtitle {
+  display: block;
+  margin-bottom: 67px;
+  font-size: 30px;
+  font-family: 'Proxima Nova Semibold', sans-serif;
 }
 /*# sourceMappingURL=style.css.map */

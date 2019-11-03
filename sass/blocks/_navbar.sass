@@ -1,19 +1,29 @@
 .navbar
+  position: fixed
+  left: 0
+  top: 0
+  width: 100%
+  background-color: #fff
   &-wrap
     display: flex
     justify-content: space-between
     align-items: center
-    min-height: 80px
-  &__menu-button
-    margin-right: 30px
+    min-height: 80px 
   &__phone
     display: block
+    margin-bottom: 5px
     font-size: 19px
     +bold
     text-decoration: none
-    color: #1C1C1C
+    color: $text-color
   &__mobile, &__landline
     text-align: right
+  &__small-text
+    display: block
+    color: $text-color-light
+    font-size: 14px
+    text-decoration: none 
+
 .menu
   &-button
     display: flex
@@ -42,4 +52,5 @@
   &__description
     display: block
     font-size: 14px
-    color: #6b6b6b 
+    color: $text-color-light
+    font-size: 14px 
