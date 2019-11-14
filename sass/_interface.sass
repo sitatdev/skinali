@@ -16,6 +16,26 @@ body
   background-color: $primary
   color: #fff
   +bold
+.bg-secondary
+  background: $bg-secondary
+.input
+  height: 80px
+  padding-left: 30px
+  border: 1px solid #DDDDDD
+.checkbox
+  display: none
+  &-label
+    display: flex
+    align-items: center
+    margin-right: 40px
+    &:before
+      content: ''
+      width: 30px
+      height: 30px
+      border: 1px solid #DDDDDD
+      margin-right: 20px
+
+  
 @media (max-width: 576px)
   .button-o
     font-size: 10px
