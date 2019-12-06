@@ -5,13 +5,14 @@
       margin: auto
       position: relative
     &-arrows
-      position: absolute
-      z-index: -1
+      position: absolute      
+      // z-index: 99
       display: flex
       justify-content: space-between
       top: 50%
       width: 100%
-      transform: translateY(-100%)
+      // transform: translateY(-100%)
+      
     &__dots
       margin: auto
       display: flex
@@ -39,5 +40,9 @@
     outline: none
   &-left
     transform: translateX(-200%)
+    &:hover
+        cursor: pointer
   &-right
     transform: translateX(200%)
+    &:hover
+        cursor: pointer

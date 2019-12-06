@@ -928,7 +928,6 @@ input[type="checkbox"]:checked + label:before {
 
 .before-slider-arrows {
   position: absolute;
-  z-index: -1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -937,8 +936,6 @@ input[type="checkbox"]:checked + label:before {
           justify-content: space-between;
   top: 50%;
   width: 100%;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
 }
 
 .before-slider__dots {
@@ -991,9 +988,17 @@ input[type="checkbox"]:checked + label:before {
           transform: translateX(-200%);
 }
 
+.arrow-left:hover {
+  cursor: pointer;
+}
+
 .arrow-right {
   -webkit-transform: translateX(200%);
           transform: translateX(200%);
+}
+
+.arrow-right:hover {
+  cursor: pointer;
 }
 
 .reviews {
