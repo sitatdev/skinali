@@ -29,6 +29,7 @@
 
 @font-face {
   font-family: 'Proxima Nova Semibold';
+  font-display: swap;
   src: url("../fonts/ProximaNova-Semibold.eot");
   src: url("../fonts/ProximaNova-Semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Semibold.woff") format("woff"), url("../fonts/ProximaNova-Semibold.ttf") format("truetype");
   font-weight: normal;
@@ -37,6 +38,7 @@
 
 @font-face {
   font-family: 'Proxima Nova Light';
+  font-display: swap;
   src: url("../fonts/ProximaNova-Light.eot");
   src: url("../fonts/ProximaNova-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Light.woff") format("woff"), url("../fonts/ProximaNova-Light.ttf") format("truetype");
   font-weight: normal;
@@ -253,7 +255,7 @@ input[type="checkbox"]:checked + label:before {
 
 @media (max-width: 576px) {
   .button {
-    font-size: 10px;
+    font-size: 8px;
   }
   .button-o {
     font-size: 10px;
@@ -369,6 +371,14 @@ input[type="checkbox"]:checked + label:before {
   width: 70px;
 }
 
+.menu-button:hover {
+  cursor: pointer;
+}
+
+.menu-button:focus {
+  outline: none;
+}
+
 .menu-button__line {
   display: block;
   width: 20px;
@@ -392,13 +402,25 @@ input[type="checkbox"]:checked + label:before {
   font-size: 14px;
 }
 
-@media (max-width: 991px) {
+@media (min-width: 577px) and (max-width: 991px) {
   .navbar__mobile, .navbar__landline {
     display: none;
+  }
+  .menu__nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -ms-flex-line-pack: distribute;
+        align-content: space-around;
+    height: 100px;
   }
 }
 
 @media (max-width: 576px) {
+  .navbar__mobile, .navbar__landline {
+    display: none;
+  }
   .logo {
     display: none;
   }
@@ -420,11 +442,13 @@ input[type="checkbox"]:checked + label:before {
 }
 
 .hero {
-  background: #F1F1F1 url("../img/hero/hero1-bg.jpg") no-repeat center top;
+  background: #F1F1F1 url("../img/hero/hero-bg.jpeg") no-repeat center top;
   background-size: cover;
   padding-top: 120px;
   padding-bottom: 270px;
   margin-top: 80px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .hero__title {
@@ -439,8 +463,21 @@ input[type="checkbox"]:checked + label:before {
   font-family: 'Proxima Nova Semibold', sans-serif;
 }
 
+.hero:hover {
+  background: #F1F1F1 url("../img/hero/hero1-bg.jpg") no-repeat center top;
+  background-size: cover;
+  padding-top: 120px;
+  padding-bottom: 270px;
+  margin-top: 80px;
+}
+
 @media (max-width: 991px) {
   .hero {
+    margin-top: 60px;
+    background-size: 100%;
+    background-position: top right;
+  }
+  .hero:hover {
     margin-top: 60px;
     background-size: 100%;
     background-position: top right;
@@ -456,7 +493,6 @@ input[type="checkbox"]:checked + label:before {
           box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
   padding: 80px;
   margin-top: -210px;
-  margin-right: -45px;
 }
 
 .offer-block_calc-bg {
@@ -649,6 +685,13 @@ input[type="checkbox"]:checked + label:before {
   position: relative;
   -webkit-box-shadow: 7px 5px 21px rgba(0, 0, 0, 0.1);
           box-shadow: 7px 5px 21px rgba(0, 0, 0, 0.1);
+  overflow-y: hidden;
+}
+
+.catalog-card:hover .catalog-card__buttons {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
 }
 
 .catalog-card__buttons {
@@ -658,6 +701,11 @@ input[type="checkbox"]:checked + label:before {
   display: flex;
   bottom: 0;
   right: 0;
+  opacity: 0;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .catalog-card__button {
@@ -759,6 +807,9 @@ input[type="checkbox"]:checked + label:before {
       -ms-flex-align: center;
           align-items: center;
   min-height: 80px;
+  font-size: 18px;
+  text-decoration: none;
+  color: #262626;
 }
 
 .blog-list__card {
@@ -1001,21 +1052,34 @@ input[type="checkbox"]:checked + label:before {
   cursor: pointer;
 }
 
+@media (max-width: 768px) {
+  .arrow-left {
+    display: none;
+  }
+  .arrow-right {
+    display: none;
+  }
+}
+
 .reviews {
   background-color: #f1f1f1;
 }
 
-.reviews-slider {
+.reviews-slider__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.reviews-slider__item {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  position: relative;
+  height: 320px;
   text-align: center;
+  margin-right: 20px;
+  outline: none;
 }
 
 .reviews-slider__image {
@@ -1025,6 +1089,12 @@ input[type="checkbox"]:checked + label:before {
   border: 2px solid #6a99e9;
   border-radius: 60%;
   margin: 20px auto;
+}
+
+.reviews-slider__picture {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .reviews-slider__text {
@@ -1048,6 +1118,18 @@ input[type="checkbox"]:checked + label:before {
   height: 10px;
   border: 10px solid transparent;
   border-top: 10px solid #fff;
+}
+
+.reviews .slick-initialized .slick-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .reviews-slider_responsive {
+    margin-bottom: 50px;
+  }
 }
 
 .factory-block {

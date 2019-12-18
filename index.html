@@ -17,11 +17,11 @@
           <nav class="menu__nav">
             <a href="#" class="menu__link">Главная</a>
             <a href="#" class="menu__link">ПРОДУКЦИЯ</a>
-            <a href="#" class="menu__link">КАТАЛОГ</a>
-            <a href="#" class="menu__link">ПРИМЕРЫ РАБОТ</a>
+            <a href="#catalog" class="menu__link">КАТАЛОГ</a>
+            <a href="#example" class="menu__link">ПРИМЕРЫ РАБОТ</a>
             <a href="#" class="menu__link">Примерка изображений</a>
             <a href="#" class="menu__link">Стоимость дилерам</a>
-            <a href="#" class="menu__link">О Скинали</a>
+            <a href="#about" class="menu__link">О Скинали</a>
           </nav>
         </div>
         <!-- /.container -->
@@ -48,7 +48,7 @@
           <a class="navbar__phone" href="tel:+74991234567">+7 499 123-45-67</a>
           <a class="navbar__email navbar__small-text" href="mailto:info@mail.cu">info@mail.cu</a>
         </div>
-        <button class="button-o navbar__button">Получить консультацию</button>
+        <a href="#offer" class="button-o navbar__button">Получить консультацию</a>
       </div>
     </div>
     <!-- /.container -->
@@ -62,7 +62,7 @@
       <span class="hero__subtitle">
         от 3 000 р/м<sup>2</sup>
       </span>
-      <button class="button hero__button">Заказать скинали</button>
+      <a href="#offer" class="button hero__button">Заказать скинали</a>
     </div>
     <!-- /.container -->
   </div>
@@ -71,7 +71,7 @@
 <!-- /.header -->
 
 <main>
-  <section class="offer bg-secondary">
+  <section class="offer bg-secondary" id="offer">
     <div class="container">
       <div class="offer__block offer-block offer-block_calc-bg">
         <h2 class="offer__title">ОСТАВЬТЕ ЗАЯВКУ НА РАСЧЕТ</h2>
@@ -80,15 +80,18 @@
           <div class="form__row">
             <div class="form__group">
               <label for="" class="form__label">Вид стекла</label>
-              <input type="text" class="input form__input">
+                <select name="" id="" class="input form__input">  <!-- можно добавить .select -->                  
+                  <option value="С печатью">С печатью</option>
+                  <option value="Без печати">Без печати</option>
+                </select>
             </div>
             <div class="form__group">
               <label for="" class="form__label">Ширина, см</label>
-              <input type="text" class="input form__input">
+              <input type="number" class="input form__input">
             </div>
             <div class="form__group">
               <label for="" class="form__label">Высота, см</label>
-              <input type="text" class="input form__input">
+              <input type="number" class="input form__input">
             </div>
           </div>
           <!-- /.form__row -->
@@ -123,7 +126,7 @@
   </section>
   <!-- /.offer -->
 
-  <section class="section features">
+  <section class="section features" id="features">
     <div class="container">
       <h2 class="section-title section__title">Наши преимущества</h2>
       <div class="features-block">
@@ -156,7 +159,7 @@
   </section>
    <!-- /.features -->
 
-   <section class="section catalog">
+   <section class="section catalog" id="catalog">
      <div class="container">
        <h2 class="section-title section__title">Каталог скинали</h2>
        <div class="catalog-block">
@@ -280,7 +283,7 @@
        </div>
       </section>
       <!-- /.section catalog -->
-       <section class="section blog">
+       <section class="section blog" id="about">
          <div class="container">
           <div class="blog__heading">
            <h3 class="blog__title">Полезное или что важно знать о скинали...</h3>
@@ -292,7 +295,7 @@
                 <img src="img/blog-list/blog-post-1.png" alt="">
               </div>
               <!-- /.blog-list__image -->
-              <div class="blog-list__text">Виды стекла</div>
+              <a href="#" class="blog-list__text">Виды стекла</a>
               <!-- /.blog-list__text -->
             </div>
             <!-- /.blog-card blog-list__card -->
@@ -301,7 +304,7 @@
                 <img src="img/blog-list/blog-post-2.png" alt="">
               </div>
               <!-- /.blog-list__image -->
-              <div class="blog-list__text">Виды печати</div>
+              <a href="#" class="blog-list__text">Виды печати</a>
               <!-- /.blog-list__text -->
             </div>
             <!-- /.blog-card blog-list__card -->
@@ -310,8 +313,7 @@
                 <img src="img/blog-list/blog-post-3.png" alt="">
               </div>
               <!-- /.blog-list__image -->
-              <div class="blog-list__text">Виды крепежа и монтажа
-                </div>
+              <a href="#" class="blog-list__text">Виды крепежа и монтажа</a>
               <!-- /.blog-list__text -->
             </div>
             <!-- /.blog-card blog-list__card -->
@@ -320,7 +322,7 @@
                 <img src="img/blog-list/blog-post-4.png" alt="">
               </div>
               <!-- /.blog-list__image -->
-              <div class="blog-list__text">Вопросы - Ответы</div>
+              <a href="#" class="blog-list__text">Вопросы - Ответы</a>
               <!-- /.blog-list__text -->
             </div>
             <!-- /.blog-card blog-list__card -->
@@ -502,7 +504,7 @@
     </section>
     <!-- /.section steps -->
 
-    <section class="section before">
+    <section class="section before" id="example">
       <div class="container">
         <h2 class="section-title section__title">До и после</h2>
         <div class="before-slider-wrap">
@@ -510,7 +512,7 @@
                 <div class="before-slider__item">
                   <div class="before-after">
                     <img src="img/before-slider/sample-before.png" alt="">
-                    <img src="img/before-slider/after-kitchen.png" alt="">
+                    <img src="img/before-slider/sample-after.png" alt="">
                   </div>
                 </div>
                 <div class="before-slider__item">
@@ -544,16 +546,18 @@
       <div class="container">
         <h2 class="section-title section__title">Отзывы наших клиентов</h2>
         <!-- /.section-title section__title -->
-        <div class="reviews-slider">
+        <div class="reviews-slider reviews-slider_responsive responsive">
           <div class="reviews-slider__item">
             <div class="reviews-slider__text">Девушка подобрала лучший вариант для меня, без первого взноса и с минимальной переплатой. 
               У Банка очень много способов погашения,<br>и удобное мобильное приложение.
             </div>
             <!-- /.reviews-slider__text -->
-            <img src="img/reviews/review-1.png" alt="" class="reviews-slider__image">
-            <span class="reviews-slider__name">
-              Екатерина Иванова Москва
-            </span> <!-- /.reviews-slider__name -->
+            <div class="reviews-slider__picture">
+              <img src="img/reviews/review-1.png" alt="" class="reviews-slider__image">
+              <span class="reviews-slider__name">
+                Екатерина Иванова, Москва
+              </span> <!-- /.reviews-slider__name -->
+            </div>
           </div>
           <!-- /.reviews-slider__item -->
           <div class="reviews-slider__item">
@@ -562,10 +566,53 @@
               В очередной раз "навешают лапши на уши" и культурно пошлют...
             </div>
             <!-- /.reviews-slider__text -->
-            <img src="img/reviews/review-2.png" alt="" class="reviews-slider__image">
-            <span class="reviews-slider__name">
-              Екатерина Иванова Москва
-            </span> <!-- /.reviews-slider__name -->
+            <div class="reviews-slider__picture">
+              <img src="img/reviews/review-2.png" alt="" class="reviews-slider__image">
+              <span class="reviews-slider__name">
+                Лилия Ласина, Мытищи
+              </span> <!-- /.reviews-slider__name -->
+            </div>
+          </div>
+          <!-- /.reviews-slider__item -->
+          <div class="reviews-slider__item">
+            <div class="reviews-slider__text">
+              Хочу рассказать об опыте знакомства с Почта банком. Мне срочно были нужны деньги, а времени на сбор документов для кредита не было.
+               Подруга посоветовала обратиться в офис Почта банка на ул. Тухачевского.
+            </div>
+            <!-- /.reviews-slider__text -->
+            <div class="reviews-slider__picture">
+              <img src="img/reviews/review-3.png" alt="" class="reviews-slider__image">
+              <span class="reviews-slider__name">
+                Денис Майков, Химки
+              </span> <!-- /.reviews-slider__name -->
+            </div>
+          </div>
+          <!-- /.reviews-slider__item -->
+          <div class="reviews-slider__item">
+            <div class="reviews-slider__text">Девушка подобрала лучший вариант для меня, без первого взноса и с минимальной переплатой. 
+              У Банка очень много способов погашения,<br>и удобное мобильное приложение.
+            </div>
+            <!-- /.reviews-slider__text -->
+            <div class="reviews-slider__picture">
+              <img src="img/reviews/review-1.png" alt="" class="reviews-slider__image">
+              <span class="reviews-slider__name">
+                Екатерина Иванова, Москва
+              </span> <!-- /.reviews-slider__name -->
+            </div>
+          </div>
+          <!-- /.reviews-slider__item -->
+          <div class="reviews-slider__item">
+            <div class="reviews-slider__text">
+              Очень часто мы сталкиваемся с недопониманием со стороны сотрудников банка, и иной раз идти не хочется...
+              В очередной раз "навешают лапши на уши" и культурно пошлют...
+            </div>
+            <!-- /.reviews-slider__text -->
+            <div class="reviews-slider__picture">
+              <img src="img/reviews/review-2.png" alt="" class="reviews-slider__image">
+              <span class="reviews-slider__name">
+                Лилия Ласина, Мытищи
+              </span> <!-- /.reviews-slider__name -->
+            </div>
           </div>
           <!-- /.reviews-slider__item -->
           <div class="reviews-slider__item">
@@ -574,10 +621,12 @@
                Подруга посоветовала обратиться в офис Почта банка на ул. Тухачевского. 
             </div>
             <!-- /.reviews-slider__text -->
-            <img src="img/reviews/review-3.png" alt="" class="reviews-slider__image">
-            <span class="reviews-slider__name">
-              Екатерина Иванова Москва
-            </span> <!-- /.reviews-slider__name -->
+            <div class="reviews-slider__picture">
+              <img src="img/reviews/review-3.png" alt="" class="reviews-slider__image">
+              <span class="reviews-slider__name">
+                Денис Майков, Химки
+              </span> <!-- /.reviews-slider__name -->
+            </div>
           </div>
           <!-- /.reviews-slider__item -->
         </div>
@@ -598,10 +647,10 @@
                   <input type="text" class="input form__input" placeholder="Ваше имя">
                 </div>
                 <div class="form__group">                  
-                  <input type="text" class="input form__input" placeholder="Ваше телефон">
+                  <input type="tel" class="input form__input" placeholder="Ваш телефон">
                 </div>
                 <div class="form__group">                  
-                  <input type="text" class="input form__input" placeholder="Ваше цена">
+                  <input type="text" class="input form__input" placeholder="Ваша цена">
                 </div>
               </div>
               <!-- /.form__row -->
@@ -669,7 +718,7 @@
             <div class="contacts-block__item">
               <img src="img/contacts/map.png" alt="" class="contacts__image">
               <div class="contacts__text">
-                <adress class="contacts__adress" >Каширинское шоссе, д. 23, офис 345</adress>
+                <adress class="contacts__adress" >Каширское шоссе, д. 23, офис 345</adress>
               </div>
               <!-- /.contacts__text -->
             </div>
@@ -688,9 +737,7 @@
         <!-- /.container -->
       </section>
       <!-- /.section contacts -->
-      <div class="map" id="map">
-          <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac01541123bc290ebd3398e39acd4236df811975ef15656b01f26021d654103be&amp;width=100%25&amp;height=410&amp;lang=ru_RU&amp;scroll=false"></script>
-      </div>
+      <div class="map" id="map"></div>
 
       <section class="section questions">
         <div class="container">
@@ -745,24 +792,11 @@
 </footer>
 <!-- /.footer -->
 
-<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-<script src="js/jquery.event.move.js"></script>
-<script src="js/jquery.twentytwenty.js"></script>
-<script src="js/slick.min.js"></script>
-<script>
-  $(window).load(function() {
-  $(".before-after").twentytwenty({
-    before_label: 'Без скинали', // Set a custom before label
-    after_label: 'Со скинали', // Set a custom after label
-  });
-  $('.before-slider').slick({
-    draggable: false,
-    dots: true,
-    dotsClass: 'before-slider__dots',
-    prevArrow: $('.arrow-left'),
-    nextArrow: $('.arrow-right')
-    });
-  });
-</script>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="js/jquery.event.move.js"></script>
+  <script src="js/jquery.twentytwenty.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/jquery.maskedinput.min.js"></script>
 </body>
 </html>

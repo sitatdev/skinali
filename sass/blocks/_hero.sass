@@ -1,9 +1,10 @@
 .hero
-  background: #F1F1F1 url('../img/hero/hero1-bg.jpg') no-repeat center top
+  background: #F1F1F1 url('../img/hero/hero-bg.jpeg') no-repeat center top
   background-size: cover
   padding-top: 120px
   padding-bottom: 270px
   margin-top: 80px
+  transition: all 1s
   &__title
     margin-bottom: 40px
     font-size: 30px
@@ -12,8 +13,18 @@
     margin-bottom: 67px
     font-size: 30px
     +bold
+  &:hover
+    background: #F1F1F1 url('../img/hero/hero1-bg.jpg') no-repeat center top
+    background-size: cover
+    padding-top: 120px
+    padding-bottom: 270px
+    margin-top: 80px 
 @media (max-width: 991px)
   .hero
     margin-top: 60px
     background-size: 100%
     background-position: top right
+    &:hover
+      margin-top: 60px
+      background-size: 100%
+      background-position: top right

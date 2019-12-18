@@ -1,27 +1,33 @@
 .reviews
   background-color: $bg-secondary
-  &-slider
-    display: flex
-    justify-content: space-between
-    // flex-wrap: wrap
+  &-slider   
     &__item
+      display: flex      
+      flex-flow: row wrap
+      align-content: space-between
+      position: relative
+      height: 320px
       text-align: center
-    &__image
+      margin-right: 20px
+      outline: none
+    &__image     
       display: block
       width: 70px
       height: 70px
       border: 2px solid #6a99e9
       border-radius: 60%
       margin: 20px auto
+    &__picture
+      flex: 1      
     &__text
-      position: relative
+      position: relative      
       font-size: 15px
       font-style: italic
       max-width: 370px
       padding: 20px
       margin-bottom: 30px
       background-color: #fff
-      border-radius: 10px
+      border-radius: 10px      
       &:after
         content: ''
         position: absolute
@@ -31,4 +37,13 @@
         height: 10px
         border: 10px solid transparent
         border-top: 10px solid #fff
+.reviews
+  & .slick-initialized
+    & .slick-slide
+      display: flex
+@media (max-width: 768px)
+  .reviews
+    &-slider
+      &_responsive
+        margin-bottom: 50px
         

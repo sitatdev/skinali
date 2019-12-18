@@ -60,6 +60,10 @@
     border-left: 1px solid #EDE6F8
     height: 80px
     width: 70px
+    &:hover
+      cursor: pointer
+    &:focus
+      outline: none
     &__line
       display: block
       width: 20px
@@ -78,11 +82,19 @@
     font-size: 14px
     color: $text-color-light
     font-size: 14px
-@media (max-width: 991px)
+@media (min-width: 577px) and (max-width: 991px)
   .navbar
     &__mobile, &__landline
       display: none
+  .menu
+    &__nav      
+      flex-flow: row wrap
+      align-content: space-around
+      height: 100px
 @media (max-width: 576px)
+  .navbar
+    &__mobile, &__landline
+      display: none
   .logo
       display: none
   .menu
